@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: RDP
 
 # Controls when the workflow will run
 on:
@@ -35,9 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo Tunnel Password:
-          echo lol > /dev/zero
+          echo lol > /dev/null
           curl ifconfig.me
-          sudo chmod +777 /dev/kvm
+          sudo chmod +777 /dev/kvm > /dev/null
           npm i localtunnel -g
           docker run --device /dev/kvm -p 6080:80 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc &
           lt --port 6080
+          sleep 919919
